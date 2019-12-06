@@ -1,4 +1,3 @@
-// const modal = require('./modal');
 import modal from './modal';
 
 let res = document.querySelector("#result");

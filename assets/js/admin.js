@@ -93,7 +93,7 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("/**\n * Admin entry point.\n *\n * src/admin/admin-index.js\n */\nvar admin = __webpack_require__(/*! ./components/admin-test */ \"./src/admin/components/admin-test.js\"); // Lets test!\n\n\nadmin.log('This is a message to the admin!!!!');\n\n//# sourceURL=webpack:///./src/admin/admin-index.js?");
+eval("/**\n * Admin entry point.\n *\n * src/admin/admin-index.js\n */\nconst admin = __webpack_require__( /*! ./components/admin-test */ \"./src/admin/components/admin-test.js\" );\n\n// Lets test!\nadmin.log( 'This is a message to the admin!!!!' );\n\n//# sourceURL=webpack:///./src/admin/admin-index.js?");
 
 /***/ }),
 
@@ -104,7 +104,7 @@ eval("/**\n * Admin entry point.\n *\n * src/admin/admin-index.js\n */\nvar admi
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("/**\n * Test admin component.\n *\n * src/admin/components/admin-test.js\n */\n// Required in our shared function.\nvar _require = __webpack_require__(/*! ../../utils/utils-index */ \"./src/utils/utils-index.js\"),\n    upper = _require.upper;\n\nvar admin = {\n  log: function log(message) {\n    console.log(upper(message));\n  }\n};\nmodule.exports = admin;\n\n//# sourceURL=webpack:///./src/admin/components/admin-test.js?");
+eval("/**\n * Test admin component.\n *\n * src/admin/components/admin-test.js\n */\n\n// Required in our shared function.\nconst { upper } = __webpack_require__( /*! ../../utils/utils-index */ \"./src/utils/utils-index.js\" );\n\nconst admin = {\n\tlog( message ) {\n\t\tconsole.log( upper( message ) );\n\t}\n};\n\nmodule.exports = admin;\n\n\n//# sourceURL=webpack:///./src/admin/components/admin-test.js?");
 
 /***/ }),
 
@@ -115,7 +115,7 @@ eval("/**\n * Test admin component.\n *\n * src/admin/components/admin-test.js\n
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("/**\n * Shared utilities.\n */\n\n/**\n * Uppercase a string.\n */\nexports.upper = function (message) {\n  return message.toUpperCase();\n};\n/**\n * Test if is type string.\n */\n\n\nexports.isString = function (message) {\n  return 'string' === typeof message;\n};\n\n//# sourceURL=webpack:///./src/utils/utils-index.js?");
+eval("/**\n * Shared utilities.\n */\n\n/**\n * Uppercase a string.\n */\nexports.upper = (message) => message.toUpperCase();\n\n/**\n * Test if is type string.\n */\nexports.isString = (message) => 'string' === typeof message;\n\n//# sourceURL=webpack:///./src/utils/utils-index.js?");
 
 /***/ })
 
